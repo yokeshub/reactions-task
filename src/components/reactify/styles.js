@@ -139,7 +139,7 @@ export const ReactedListBox = styled.div`
   text-align: center;
   padding: 8px;
   position: absolute;
-  z-index: 1;
+  z-index: 999;
   top: 105%;
   left: 50%;
   transform: translate(-50%, 0%);
@@ -147,6 +147,24 @@ export const ReactedListBox = styled.div`
   transition: opacity 0.5s;
   animation-name: ${ReactedListAnimation};
   animation-duration: 0.2s;
+  ::-webkit-scrollbar {
+    width: 7px;
+  }
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 5px;
+  }
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #6c7dfe; 
+    border-radius: 5px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background:  #6d7dfe; 
+  }
 `;
 export const ReactedBoxContainer = styled.div`
   position: relative;
@@ -165,7 +183,13 @@ export const ReactedBoxContainer = styled.div`
       display: block;
       visibility: visible;
       opacity: 1;
+      border:1px solid #0F62FE;
     }`}
+    &:hover ${ReactedListBox} {
+      display: block;
+      visibility: visible;
+      opacity: 1;
+    }
 `;
 
 export const ReactedPerson = styled.p`
