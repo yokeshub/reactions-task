@@ -101,7 +101,7 @@ const Reaction = ({ reactionsData, contentId, userId }) => {
                 <ReactedListBox>
                   <ReactedPerson head>Reacted list</ReactedPerson>
                   {emoj.reactedList.map((rd) => {
-                    return <ReactedPerson>{rd.id}</ReactedPerson>;
+                    return <ReactedPerson>{rd.user_id}</ReactedPerson>;
                   })}
                 </ReactedListBox>
               </ReactedBoxContainer>
