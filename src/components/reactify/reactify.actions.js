@@ -147,10 +147,10 @@ function isEmptyObject(value) {
 
 
 export const removeReaction = (dispatch, values, ucId,getUpdated) => {
-  // dispatch({
-  //   type: PRESET_REMOVE_REACTION,
-  //   payload: { reactionId: values.reaction_id },
-  // });
+  dispatch({
+    type: PRESET_REMOVE_REACTION,
+    payload: { reactionId: values.reaction_id },
+  });
   dispatch({
     type: REMOVE_REACTION_LOADING,
   });
